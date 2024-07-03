@@ -12,14 +12,14 @@ function crearCard(titulo,descripcion,url,imagen){
             <div class="descripcion-video">
                 <img src="${imagen}" alt="logo canal alura">
                 <h3>${titulo}</h3>
-                <p>${titulo}</p>
+                <p>${descripcion}</p>
             </div>`
 
             return video;
 }
 
 async function listarVideos(){
-    const listaAPI = conexionAPI.listarVideos()
+    const listaAPI = await conexionAPI.listarVideos()
 
     listaAPI.forEach(video=>lista.appendChild(crearCard(video.titulo,video.descripcion,video.url,video.imagen)))
 }

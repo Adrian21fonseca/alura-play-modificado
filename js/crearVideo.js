@@ -1,6 +1,6 @@
 import { conexionAPI } from "./conexionAPI.js";
 
-const formulario = document.querySelector("[data-fotmulario]");
+const formulario = document.querySelector("[data-formulario]");
 
 async function crearVideo(evento){
 
@@ -17,4 +17,4 @@ async function crearVideo(evento){
     window.location.href="../pages/envio-concluido.html";
 }
 
-formulario.addEventListener("submit", evento => crearVideo(evento));
+formulario.addEventListener("submit",evento => crearVideo(evento));
